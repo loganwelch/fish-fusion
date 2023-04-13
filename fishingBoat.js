@@ -1,10 +1,15 @@
 //create an array of objects called fishObjects. each object will represent a fish, each containing four properties
 //propertis are: Species, Weight, Price (ranges $3-10), Amount (quantity of each fish caught
+
 //define function that other modules can invoke in order to see todays catch
     // boatInventory is name of function
     //return fishObjects array (represents todaysCatch)
-//(in other modules) when boatInventory is invoked save the array as a variable called todaysCatch
-//export boatInventory to fishMonger module
+
+    //(in other modules) when boatInventory is invoked save the array as a variable called todaysCatch
+
+    //export boatInventory to fishMonger module
+
+
 /*
 fishObjects = [
     { id: 1, species: "Halibut", weight: 6, price: 3.55, amount: 30 },

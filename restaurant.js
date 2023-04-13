@@ -1,4 +1,4 @@
-/import fishmonger function from fishMonger.js
+//import fishmonger function from fishMonger.js
 //import chefsOrder function from fishMonger.js
 //invoke fishmonger function and call the modified array mongerInventory
 //declare a number variable called chefBudget that represents the highest price the chef will pay for a fish that day

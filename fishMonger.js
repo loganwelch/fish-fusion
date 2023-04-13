@@ -1,4 +1,4 @@
-/ import boatInventory function
+// import boatInventory function
 //invoke boatInventory, which generates todaysCatch array
 //create a function called fishmonger with a for of loop that iterates through todaysCatch
     //declare empty array called mongerInventory []

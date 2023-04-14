@@ -1,22 +1,34 @@
-//import fishmonger function from fishMonger.js
-//import chefsOrder function from fishMonger.js
+//import mongerInventory function from fishMonger.js
+const { mongerInventory } = require("./fishMonger.js")
 
-//invoke fishmonger function and call the modified array mongerInventory
+//console.log menu header in its own console log
+console.log("<h1>Menu</h1>")
 
-//declare a number variable called chefBudget that represents the highest price the chef will pay for a fish that day
-
-//console.log menu header <h1>Menu</h1> in its own console log
 //define a function fishMenu that returns the HTML string of the menu
-    //invoke chefsOrder argument with chefBudget as an argument and return chefsInventory
-    //use a for loop to iterate through species property of the chefsInventory array 
-    //console.log a template string with html text and species property that look like this:
-    /* 
-    <article class="menu">
-        <h2>Tuna</h2>
-        <section class="menu__item">${fishObjects.species} Soup</section>
-        <section class="menu__item">${fishObjects.species} Sandwich</section>
-        <section class="menu__item">Grilled ${fishObjects.species}</section>
-    </article> */
+    const fishMenu = (dailyPriceLimit) => { 
+        //invoke mongerInventory with dailyPriceLimit as an argument
+        let chefArray = mongerInventory(dailyPriceLimit)
+        //create empty string called message to add each menu item to it
+        let message = ""
+        //use a for loop to iterate through species property of the chefsInventory array
+        for(fish of chefArray) {
+            //use template string with html text and species property to display menu
+            message += `<article class="menu">
+    <h2>${fish.species}</h2>
+    <section class="menu__item">${fish.species} Soup</section>
+    <section class="menu__item">${fish.species} Sandwich</section>
+    <section class="menu__item">Grilled ${fish.species}</section>
+</article> \n`
+        
+        }
+        return message
+    }
+
+
+
+
+
+module.exports = { fishMenu }
 
 
 
@@ -24,8 +36,7 @@
 
 
 
-    //create function that looks into boatInventory <---LOL @ us
-
+//create function that looks into boatInventory <---LOL @ us
 
 //other options:
     //invoke chefsOrder function outside of fishMenu function and call the modified array chefsInventory
